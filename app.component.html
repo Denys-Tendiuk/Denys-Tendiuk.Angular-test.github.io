@@ -1,0 +1,48 @@
+ <router-outlet></router-outlet>
+ 
+ <app-first-component></app-first-component>
+ <app-second-component></app-second-component>
+
+ <!-- <div data-ng-app="myApp" data-ng-init="firstInputNumber=-5;secondInputNumber=10">
+     
+
+<input type="number" [(ngModel)]="firstInputNumber">
+<input type="number" [(ngModel)]="secondInputNumber" >
+<button>Старт</button>
+</div>  -->
+
+<div ng-app="myApp" ng-controller="myControl">
+    <button ng-click="myFunction()">Start</button>
+    <input type="number" [(ngModel)]="firstInputNumber">
+    <input type="number" [(ngModel)]="secondInputNumber">
+    <!-- <p>{{firstInputNumber}}</p> -->
+</div>
+<script> 
+var app = angular.module('myApp', []); 
+app.controller('myControl', function($scope) { 
+    $scope.firstInputNumber = -5;
+    $scope.myFunction = function() { 
+        $scope.firstInputNumber++;
+        $scope.secondInputNumber-2;
+    }
+}); 
+</script>
+
+
+
+
+
+
+
+    
+    
+    
+  
+
+
+
+
+
+
+
+
